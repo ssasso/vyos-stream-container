@@ -23,3 +23,7 @@ docker run -d --name vyos --privileged -v /lib/modules:/lib/modules ssasso/vyos-
 ```
 docker exec -it vyos su vyos
 ```
+
+## GHCR Repo
+
+`ghcr.io/ssasso/vyos-stream-container` --> http://ghcr.io/ssasso/vyos-stream-container
