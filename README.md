@@ -9,7 +9,7 @@ The **TAG** must be equal to the VyOS Stream release for which a container image
 ## Manual Build
 
 ```
-docker build -t ssasso/vyos-stream-container:latest .
+docker build --build-arg VERSION=2026.03 -t ssasso/vyos-stream-container:latest .
 ```
 
 ## Running
