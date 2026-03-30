@@ -42,15 +42,3 @@ jobs:
           build-args: VERSION=${{ github.ref_name }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Get repository name
-        run: echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
-
-      - name: Delete old images
-        uses: snok/container-retention-policy@v2
-        with:
-          image-names: ${{ env.REPOSITORY_NAME }}
-          cut-off: One week ago UTC
-          keep-at-least: 2
-          account-type: personal
-          token: ${{ secrets.PAT }}
